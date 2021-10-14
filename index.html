@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Front-End</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Front-end Project</a>
+                <ul class="navbar-nav" id="login">
+                    <li class="nav-item mx-2">
+                        <input type="email" id="email" class="form-control" style="width: 250px;" value="duardo@duardo.com">
+                    </li>
+                    <li class="nav-item mx-2">
+                        <input type="password" id="password" class="form-control" value="123456789">
+                    </li>
+                    <li class="nav-item mx-2">
+                        <button class="btn btn-primary" onclick="login()">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-2">
+        <button class="btn btn-primary" onclick="carregaProduto()">Carrega Produtos</button>
+        <select id="produtos">
+            <option value="1">Coca-Cola 2L</option>
+            <option value="2">Coca-Cola 2L</option>
+            <option value="3">Coca-Cola 2L</option>
+            <option value="4">Coca-Cola 2L</option>
+            <option value="5">Coca-Cola 2L</option>
+        </select>
+    </main>
+</body>
+
+</html>
