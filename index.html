@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Front-End</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Front-end Project</a>
+                <ul class="navbar-nav" id="login">
+                    <li class="nav-item mx-2">
+                        <input type="email" id="email" class="form-control" style="width: 250px;" value="hugo@hugo.com">
+                    </li>
+                    <li class="nav-item mx-2">
+                        <input type="password" id="password" class="form-control" value="12345678">
+                    </li>
+                    <li class="nav-item mx-2">
+                        <button class="btn btn-primary" onclick="login()">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container ">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <button class="btn btn-primary" onclick="carregaProduto()">Carrega Produtos</button>
+                    <select id="produtos">
+                        <option value="1">Produtos</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <button class="btn btn-primary" onclick="carregaMercado()">Carrega Produtos</button>
+                    <select id="mercados">
+                        <option value="1">Mercado</option>
+                    </select>
+                </div>
+
+                <div>
+                    <h3>Cadastar Supermercado</h3>
+
+                    <label for="">Nome</label>
+                    <input type="text" id="name">
+
+                    <label for="">Endereço</label>
+                    <input type="text" id="address">
+
+                    <label for="">CNPJ</label>
+                    <input type="text" id="cnpj">
+
+                    <button class="btn btn-primary" onclick="cadastrarMarket()">cadastrar</button>
+                </div>
+
+                <div>
+                    <h3>Cadastar Produto</h3>
+
+                    <label for="">EAN</label>
+                    <input type="text" id="EAN">
+
+                    <label for="">Nome</label>
+                    <input type="text" id="name1">
+
+                    <label for="">Quantidade</label>
+                    <input type="number" step="0.010" id="quantity">
+
+                    <label for="">Unit</label>
+                    <input type="text" id="unit">
+
+                    <button class="btn btn-primary" onclick="cadastrarProduct()">cadastrar</button>
+                </div>
+
+                <div>
+                    <h3>Cadastar Produto a Mercado</h3>
+
+                    <button class="btn btn-primary" onclick="carregaProdutosMercados.carregar1()">Carrega Produtos e
+                        Mercados</button>
+                    <select id="produtos2">
+                        <option value="1">Produtos</option>
+                    </select>
+                    <select id="mercados2">
+                        <option value="1">Mercados</option>
+                    </select>
+
+                    <label for="">Preço</label>
+                    <input type="text" id="price">
+
+                    <button class="btn btn-primary" onclick="carregaProdutosMercados.carregar2()">cadastrar</button>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div>
+                    <h3>Produtos</h3>
+                    <div><button class="btn btn-primary" onclick="MostrarProdutos()">Mostrar</button></div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Quantidade
+                                </th>
+
+                                <th>
+                                    EAN
+                                </th>
+                                <th>
+                                    Unit
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela">
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
