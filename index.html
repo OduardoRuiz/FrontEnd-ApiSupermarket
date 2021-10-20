@@ -16,8 +16,9 @@
                 <a class="navbar-brand" href="#">Front-end Project</a>
                 <ul class="navbar-nav" id="login">
                     <li class="nav-item mx-2">
-                        <input type="email" id="email" class="form-control" style="width: 250px;" value="duardo@duardo.com">
-                    </li>
+                        <input type="email" id="email" class="form-control" style="width: 250px;"
+                            value="duardo@duardo.com">
+                    </li> 
                     <li class="nav-item mx-2">
                         <input type="password" id="password" class="form-control" value="123456789">
                     </li>
@@ -28,15 +29,165 @@
             </div>
         </nav>
     </header>
-    <main class="container my-2">
-        <button class="btn btn-primary" onclick="carregaProduto()">Carrega Produtos</button>
-        <select id="produtos">
-            <option value="1">Coca-Cola 2L</option>
-            <option value="2">Coca-Cola 2L</option>
-            <option value="3">Coca-Cola 2L</option>
-            <option value="4">Coca-Cola 2L</option>
-            <option value="5">Coca-Cola 2L</option>
-        </select>
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <button class="btn btn-info mb-3" onclick="carregaProduto()">Carregar Produtos</button>
+                    <select id="produtos" class="form-select form-select-lg mb-3">
+                        <option value="1">Produtos</option>
+                    </select>
+                </div>
+                
+
+                <div>
+                    <button class="btn btn-info mb-3" onclick="carregaMercado()">Carregar Mercado</button>
+                    <select id="mercados"class="form-select form-select-lg mb-3">
+                        <option value="1">Mercado</option>
+                    </select>
+                </div>
+<hr>
+
+                <div>
+                    <h3>Cadastar Supermercado</h3>
+
+                    <div> 
+                        <label for="">Nome</label>
+                        <input type="text" id="name" class="input-group mb-3">
+                    </div>
+                    <div>
+                        <label for="">Endereço</label>
+                        <input  type="text" id="address"class="input-group mb-3">
+                    </div>
+
+                    <div>
+                        <label for="">CNPJ</label>
+                        <input type="text" id="cnpj" class="input-group mb-3">
+
+                    </div>
+
+                    <button class="btn btn-success mb-3" onclick="cadastrarMarket()">Cadastrar</button>
+                </div>
+
+                <hr>
+
+                <div class="mt-4">
+                    <h3>Cadastar Produto</h3>
+                    <div class="">
+                        <label for="">EAN</label>
+                        <input class="input-group mb-3" type="text" id="EAN">
+                        <label for="">Nome</label>
+                        <input class="input-group mb-3" type="text" id="name1">
+                    </div>
+
+                    <div>
+                        <label for="">Quantidade</label>
+                        <input class="input-group mb-3"  type="number" step="0.010" id="quantity">
+
+                        <label for="">UNID</label>
+                        <input class="input-group mb-3" type="text" id="unit">
+                    </div>
+
+                    <button class="btn btn-success mb-3" onclick="cadastrarProduct()">Cadastrar</button>
+                </div>
+<hr>
+                <div>
+                    <h3 class="mt-5">Cadastar Produto a Mercado</h3>
+
+                    <div>
+                        <button class="btn btn-primary mb-3 mt-1" onclick="carregaProdutosMercados.carregar1()">Carrega Produtos e
+                            Mercados</button>
+                        <select class="form-select form-select-lg mb-3" id="produtos2">
+                            <option value="1">Produtos</option>
+                        </select>
+                        <select class="form-select form-select-lg mb-3" id="mercados2">
+                            <option  value="1">Mercados</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="">Preço</label>
+                        <input class="input-group mb-3" type="text" id="price">
+
+                        <button class="btn btn-success" onclick="carregaProdutosMercados.carregar2()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--daqui pra baixo mostra produtos-->
+            <div class="col">
+                <div>
+                    <h3>Produtos</h3>
+                    <div><button class="btn btn-primary mb-3" onclick="MostrarProdutos()">Mostrar todos os produtos</button></div>
+                    <div><button class="btn btn-primary" onclick="carregaMercado2()">Mostrar Produtos Cadastrados no Mercado</button></div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Quantidade
+                                    
+                                </th>
+
+                                <th>
+                                    EAN
+                                </th>
+                                <th>
+                                    UNID
+                                </th>
+                                <th>
+                                    Preco
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela">
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <hr>
+                <div>
+                    <h4>Você encontra o produto selecionado nos mercados abaixo</h4>
+                    <div><button class="btn btn-primary" onclick="carregaProdutos2()">Buscar onde tem o produto</button></div>
+                    
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Endereço
+                                    
+                                </th>
+
+                                <th>
+                                    Preço
+                                </th>
+
+                                
+                             
+                            </tr>
+                        </thead>
+                        <tbody id="tabela_produto">
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 
